@@ -1,0 +1,106 @@
+ .mask{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+ }
+
+ .into-image{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+ 
+ }
+ 
+ .mask::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity:0.5;
+   
+ }
+
+ .hero{
+    height: 100%;
+    width: 100%;
+    
+ }
+
+ .hero-text{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  
+ }
+.btn{
+    cursor: pointer;
+    margin-top: 1.2rem;
+}
+ 
+.head{
+    position: relative;
+    display: inline-block; 
+    font-size: 2rem; 
+    font-weight: bold;
+    
+}
+
+.head::after {
+    content: '';
+    display: block;
+    width: 50px; 
+    height: 3px; 
+    background-color: white; 
+    margin: 8px auto 0; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.para{
+    padding-top: 1.5rem;
+    color: #ffd6ff;
+    font-weight: 500;
+}
+
+.btn1{
+   background: #344e41;
+   color: white;
+   padding: 14px 25px;
+   margin-top: 20px;
+   font-size: 16px;
+   border-radius: 30px;
+   font-size: 20px;
+   border: none;
+   display: inline-flex;
+   align-items: center;
+   justify-items: center;
+   cursor: pointer;
+}
+
+@media (max-width:850px){
+   .hero-text h1{
+      font-size: 40px;
+   }
+}
+ 
+@media (max-width:650px){
+   .hero-text h1{
+      font-size: 30px;
+      max-width: 400px;
+      margin: auto;
+   }
+   .hero-text p{
+      font-size: 14px;
+      margin: 15px auto 30px;
+   }
+}
